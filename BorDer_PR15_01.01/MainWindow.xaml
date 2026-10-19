@@ -1,0 +1,65 @@
+﻿<Window x:Class="BorDer_PR15_01._01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BorDer_PR15_01._01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500"
+        FontFamily="Tahoma" FontSize="14">
+    <Grid Margin="10" Background="Azure" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+
+            
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Фамилия" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Surname" Grid.Column="1" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Имя" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Name" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Отчество (не обязательно)" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Patronymic" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Логин" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Login" Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Номер телефона" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_PhoneNumber" Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Электронная почта" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Email" Grid.Column="1" Grid.Row="5" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Пароль" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Password" Grid.Column="1" Grid.Row="6" VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Подтверждение пароля" Grid.Column="0" Grid.Row="7" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_ConfirmPassword" Grid.Column="1" Grid.Row="7" VerticalContentAlignment="Center"/>
+
+        <WrapPanel Orientation="Horizontal" Margin="10,5,10,5" Grid.ColumnSpan="2" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btn_Register" Content="Зарегистрироваться" Padding="5" Background="LawnGreen" Click="btn_Register_Click"/>
+        </WrapPanel>
+
+        <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="9" HorizontalAlignment="Center">
+            <TextBlock Text="Уже зарегистрированы?"/>
+            <Button x:Name="btn_Login" Content="Войти" Background="LawnGreen" Padding="5" Margin="5" Click="btn_Login_Click"/>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
